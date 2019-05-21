@@ -22,5 +22,5 @@ var arr=[6,5,3,1,8,7,2,4]
 insertSort(arr);
 console.log(arr)
 
-//注意：外部第一轮的内部第二轮会出现undefined与tmp的比较,结果为布尔值：false；所以执行else的代码
+//其中：外部第一轮的内部第二轮会出现undefined与tmp的比较,结果为布尔值：false；所以执行else的代码
 console.log(undefined>tmp)
