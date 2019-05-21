@@ -1,0 +1,207 @@
+body {
+    font-size: 16px;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Times New Roman", "Microsoft YaHei", SimSun, SimHei;
+}
+
+#main > .container {
+    margin-top: 2rem;
+}
+/**
+* 栏目标题
+ */
+#main > .container > .lanmu {
+    height: 6rem;
+    border-top: #edf1f2 solid 1px;
+    border-bottom: #edf1f2 solid 1px;
+}
+
+#main > .container > .lanmu span {
+    line-height: 6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/**
+* 职业介绍
+ */
+#main > .container > .box {
+    float: left;
+    width: 33%;
+    margin-top: 3rem;
+    border: #f5f5f5 solid 2px;
+    border-radius: 0.5rem;
+}
+
+#main > .container > .box > .media {
+    margin: 1rem;
+
+}
+
+#main > .container > .box > .media > .media-body {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.1rem;
+}
+
+#main > .container > .box > .media > .media-body > .media-heading {
+
+}
+
+.media-object {
+    zoom: 0.6;
+}
+
+/**
+* 门槛、难易度
+ */
+#main > .container > .box > .request {
+    border-top: #f1f1f1 solid 1px;
+
+}
+
+#main > .container > .box > .request > .request-left {
+    float: left;
+    width: 50%;
+    color: #b8b8b8;
+    font-size: 1.1rem;
+    border-right: #edf1f2 solid 1px;
+    height: 3rem;
+}
+
+#main > .container > .box > .request > .request-right {
+    width: 50%;
+    float: left;
+    color: #b8b8b8;
+    font-size: 1.1rem;
+    height: 3rem;
+}
+
+.request span {
+    line-height: 3rem;
+    padding-left: 1rem;
+}
+
+.request img {
+    zoom: 0.8;
+    line-height: 3rem;
+}
+
+/**
+* 特点（特色）
+ */
+
+#main > .container > .box > .tedian {
+
+}
+
+#main > .container > .box > .tedian > .tedian-left {
+    float: left;
+    width: 50%;
+    color: #b8b8b8;
+    font-size: 1.1rem;
+    border-right: #edf1f2 solid 1px;
+    height: 3rem;
+    border-top: #edf1f2 solid 1px;
+}
+
+#main > .container > .box > .tedian > .tedian-right {
+    width: 50%;
+    float: left;
+    color: #b8b8b8;
+    font-size: 1.1rem;
+    height: 3rem;
+    border-top: #edf1f2 solid 1px;
+}
+
+.tedian span {
+    line-height: 3rem;
+    padding-left: 1rem;
+}
+
+/**
+* 薪资待遇
+ */
+#main > .container > .box > .salary {
+}
+
+#main > .container > .box > .salary > .salary-left {
+    float: left;
+    width: 40%;
+    color: #b8b8b8;
+    font-size: 1.1rem;
+    border-right: #edf1f2 solid 1px;
+    height: 9rem;
+    border-top: #edf1f2 solid 1px;
+}
+
+#main > .container > .box > .salary > .salary-right {
+    width: 60%;
+    float: left;
+    color: #b8b8b8;
+    font-size: 1.1rem;
+    height: 3rem;
+    border-top: #edf1f2 solid 1px;
+
+}
+
+#main > .container > .box > .salary > .row1, .row2, .row3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#main > .container > .box > .salary > .salary-right > .item {
+    line-height: 3rem;
+    padding-left: 1rem;
+    color: #0f0f0f;
+    font-weight: 600;
+}
+
+#main > .container > .box > .salary > .salary-right > .item > .item-right {
+
+}
+
+.salary-title {
+    padding-left: 30%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 9rem;
+}
+
+/*
+* 学习人数
+ */
+#main > .container > .box > .num {
+    clear: both;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 3rem;
+    padding-left: 1rem;
+    border-top: #edf1f2 solid 1px;
+}
+
+#main > .container > .box > .num > .red {
+    line-height: 3rem;
+    color: #f01400;
+    padding: 0;
+
+}
+
+/*
+* 提示
+ */
+#main > .container > .box > .tips {
+    color: #b8b8b8;
+    font-size: 1rem;
+    height: 3rem;
+    border-top: #edf1f2 solid 1px;
+}
+
+#main > .container > .box > .tips span {
+    line-height: 3rem;
+    padding-left: 1rem;
+}

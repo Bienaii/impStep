@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-size: 62.5%;
+    font-family: Arial, "Times New Roman", "Microsoft YaHei", SimSun, SimHei;
+}
+/*
+***顶部通栏
+*/
+#header {
+
+}
+#header > .bar {
+    background: #fafafa;
+    height: 2.2rem;
+}
+#header > .bar > .row > .col-md-4 span{
+    font-size: 1rem;
+    color: #29b078;
+    line-height: 2.2rem;
+}
+.applogin li {
+    margin: 0.3rem 0;
+}
+
+#header > .nav {
+    background: #29b078;
+    height: 6rem;
+}
+.navbar-bienai .navbar-nav {
+    float: right;
+}
+.navbar-bienai .navbar-nav > li > a {
+    color: #fafafa;
+    line-height: 3rem;
+    font-size: 1.3rem;
+    margin: auto 1.2rem;
+}
+.navbar-bienai .navbar-nav > li > a:active {
+    color: #fafafa;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    margin: auto 1.2rem;
+    border-bottom: 2px solid #fafafa;
+}
+
+.navbar-bienai .navbar-nav > li > a:hover {
+    color: #fafafa;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    margin: auto 1.2rem;
+    border-bottom: 0.2rem solid #fafafa;
+}
+/**
+*轮播
+ */
+#lunbo {
+    margin-bottom: 10rem;
+}
+/**
+*特色
+ */
+#tese{
+
+}
+#tese > .container > .row > .col-md-3 {
+    text-align: center;
+}
+#tese > .container > .row > div{
+    height: 17rem;
+    border-right: #e1e1e1 dashed 1px;
+}
+#tese > .container > .row > .col-md-3 > .lol {
+    margin-bottom: 2rem;
+}
+#tese > .container > .row > .col-md-3 > .lolo {
+    margin-bottom: 2.5rem;
+}
+#tese > .container > .row > .col-md-3 span{
+    color: #494949;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+#tese > .container > .row > .col-md-3 p {
+    color: #cacaca;
+    width: 50%;
+    margin: auto;
+    padding-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+#tese > .container > .row > .col-right {
+    border-right: transparent;
+}
+#tese > .container > .row > .col-right > .pianyi{
+    position: relative;
+    left: -6rem;
+    top: 3rem;
+}
+#tese > .container > .row > .col-right > .pianyi > .pianyi-sub {
+    margin-bottom: 1rem;
+}
+/**
+* 学习
+ */
+#study > .container > .row > .col-md-3 {
+    display: inline-block;
+}
+#study > .container > .row > div {
+    height: 10rem;
+}
+#study > .container > .study-title {
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#study > .container > .study-title > span{
+    font-size: 1.5rem;
+}
+.circle {
+    width: 5rem;
+    height: 5rem; /*宽高用于设置圆的大小，宽高不等则圆不规则*/
+    background: #ffffff;
+    border-radius: 50%; /*此值越小，形状越方，超过50%即表现为圆*/
+    border: 1px solid #eae9ea;
+    margin-top: 2.5rem;
+}
+.circle span {
+    line-height: 5rem;
+    margin-left: 2rem;
+    color: #29b078;
+    font-size: 1.5rem;
+}
+#study > .container > .row > .col-md-3 > .media > .content {
+    padding-top: 3.3rem;
+    font-size: 1.2rem;
+    color: #cacaca;
+}
+
+
+/*
+***雪碧图引入
+*/
+.bg-logo {
+    width: 199px; height: 84px;
+    background: url('../../images/task8/task8-1.png') -10px -10px;
+    zoom: 0.5;
+
+}
+
+.bg-arrow {
+    width: 29px; height: 26px;
+    background: url('../../images/task8/task8-1.png') -572px -196px;
+}
+
+.bg-book {
+    width: 61px; height: 55px;
+    background: url('../../images/task8/task8-1.png') -491px -196px;
+    margin: auto;
+}
+
+.bg-partner03 {
+    width: 148px; height: 73px;
+    background: url('../../images/task8/task8-1.png') -184px -343px;
+}
+
+.bg-partner04 {
+    width: 180px; height: 73px;
+    background: url('../../images/task8/task8-1.png') -10px -114px;
+}
+
+.bg-wechat {
+    width: 22px; height: 22px;
+    background: url('../../images/task8/task8-1.png') -491px -358px;
+    zoom: 0.7;
+}
+
+.bg-avatar01 {
+    width: 108px; height: 116px;
+    background: url('../../images/task8/task8-1.png') -10px -207px;
+}
+
+.bg-rocket {
+    width: 45px; height: 67px;
+    background: url('../../images/task8/task8-1.png') -491px -271px;
+    margin: auto;
+}
+
+.bg-partner02 {
+    width: 88px; height: 73px;
+    background: url('../../images/task8/task8-1.png') -491px -103px;
+}
+
+.bg-num {
+    width: 20px;
+    height: 16px;
+    background: url('../../images/task8/task8-1.png') -533px -358px;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    position:  relative;
+    left: 8rem;
+    top: 0.8rem;
+}
+
+.bg-avatar04 {
+    width: 108px; height: 113px;
+    background: url('../../images/task8/task8-1.png') -138px -207px;
+}
+
+.bg-sina {
+    width: 23px; height: 22px;
+    background: url('../../images/task8/task8-1.png') -599px -145px;
+    zoom: 0.7;
+}
+
+.bg-avatar02 {
+    width: 111px; height: 113px;
+    background: url('../../images/task8/task8-1.png') -229px -10px;
+}
+
+.bg-partner05 {
+    width: 135px; height: 73px;
+    background: url('../../images/task8/task8-1.png') -491px -10px;
+}
+
+.bg-qq {
+    width: 23px; height: 22px;
+    background: url('../../images/task8/task8-1.png') -599px -103px;
+    zoom: 0.7;
+}
+
+.bg-task8_1_20 {
+    width: 54px; height: 56px;
+    background: url('../../images/task8/task8-1.png') -556px -271px;
+    margin: auto;
+
+
+}
+
+.bg-avatar03 {
+    width: 111px; height: 109px;
+    background: url('../../images/task8/task8-1.png') -360px -10px;
+}
+
+.bg-partner01 {
+    width: 154px; height: 73px;
+    background: url('../../images/task8/task8-1.png') -10px -343px;
+}
+
+/**
+* bootstrap扩展
+*/
+.navbar-bienai {
+    background-color: #29b078;
+    border-color: #e7e7e7;
+    margin-bottom: 0;
+}
+.navbar-bienai .navbar-brand {
+    color: #777;
+    margin-top: 1rem;
+}
+.navbar-bienai .navbar-brand:hover,
+.navbar-bienai .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.navbar-bienai .navbar-text {
+    color: #777;
+}
+.navbar-bienai .navbar-nav > li > a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+.navbar-bienai .navbar-nav > li > a:hover,
+.navbar-bienai .navbar-nav > li > a:focus {
+    background-color: transparent;
+}
+.navbar-bienai .navbar-nav > .active > a,
+.navbar-bienai .navbar-nav > .active > a:hover,
+.navbar-bienai .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+.navbar-bienai .navbar-nav > .disabled > a,
+.navbar-bienai .navbar-nav > .disabled > a:hover,
+.navbar-bienai .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.navbar-bienai .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-bienai .navbar-toggle:hover,
+.navbar-bienai .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-bienai .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-bienai .navbar-collapse,
+.navbar-bienai .navbar-form {
+    border-color: #e7e7e7;
+}
+.navbar-bienai .navbar-nav > .open > a,
+.navbar-bienai .navbar-nav > .open > a:hover,
+.navbar-bienai .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .navbar-bienai .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-bienai .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-bienai .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-bienai .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-bienai .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-bienai .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-bienai .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-bienai .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-bienai .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.navbar-bienai .navbar-link {
+    color: #777;
+}
+.navbar-bienai .navbar-link:hover {
+    color: #333;
+}
+.navbar-bienai .btn-link {
+    color: #777;
+}
+.navbar-bienai .btn-link:hover,
+.navbar-bienai .btn-link:focus {
+    color: #333;
+}
+.navbar-bienai .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-bienai .btn-link:hover,
+.navbar-bienai .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-bienai .btn-link:focus {
+    color: #ccc;
+}

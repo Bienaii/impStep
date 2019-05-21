@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <title>v-cloak、v-text、v-html、v-bind、v-on使用</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- v-text会覆盖元素中原本的内容，但是插值表达式只会替换自己的这个占位符，不会把整个元素的内容清空 -->
+    <div id="app">
+        <!-- 使用v-cloak能够解决插值表达式闪烁的问题 -->
+        <p v-cloak>+++++{{ msg }}++++++</p>
+        <!-- 默认v-text是没有闪烁问题的 -->
+        <h5 v-text='msg'>此段文本将被覆盖</h5>
+
+        <div>{{ msg2 }}</div>
+        <div v-text="msg2"></div>
+        <!-- v-html也会覆盖原内容，但会把内容当做html格式输出 -->
+        <div v-html="msg2">=====</div>
+
+        <!-- v-bind：是vue中提供的用于绑定属性的指令，在其中可以写合法的表达式；可以简写为：要绑定的属性-->
+        <!-- <input type="button" value="按钮" title="mytitle">  -->
+        <!-- <input type="button" value="按钮" v-bind:title="mytitle+',可看成表达式'">  -->
+        <input type="button" value="按钮" :title="mytitle"> 
+        </br></br>
+
+        <!-- Vue中提供了v-on时间绑定机制，可以简写为@ -->
+        <!-- 其他鼠标时间也可以 -->
+        <input type="button" value="按钮" :title="mytitle" v-on:click="show">
+        
+        
+    </div>
+    <script>
+        var vm=new Vue({
+            el:'#app', 
+            data:{      
+                msg:'123' ,
+                msg2: '<h1>我是h1标签</h1>',
+                mytitle:'自定义title'
+            },
+            methods:{  //这个属性中定义了vm实例所有可用的方法
+                show:function(){
+                    alert('hello v-on')
+                }
+            }
+        })
+    </script>
+
+    
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取、判断数据类型</title>
+</head>
+<body>
+    <script>
+        var num=10;
+        //获取 num 这个变量的数据类型
+        console.log(typeof num)
+        
+        var obj={};
+        //判断 obj 这个对象的是不是某个类型的
+        console.log(obj instanceof Object)
+
+        //获取某个对象的数据类型(以字符串的形式显示) 
+        // console.log(Object.prototype.toString.call())
+
+
+        //此时输出的是 Object 的数据类型(以字符串的形式显示)    [object Object]
+        console.log(Object.prototype.toString())
+
+        //此时输出的是 数组 的数据类型(以字符串的形式显示) (借助call())    [object Array]
+        console.log(Object.prototype.toString.call([]))
+
+        var arr=[10,20,30];
+        console.log(Object.prototype.toString.call(arr))
+        
+        //此时输出的是 date 的数据类型(以字符串的形式显示)     [object Date]
+        console.log(Object.prototype.toString.call(new Date()))
+    
+    </script>
+</body>
+</html>

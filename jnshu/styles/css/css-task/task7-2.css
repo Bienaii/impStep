@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-size: 62.5%;
+
+}
+
+.main {
+    background: #29bde0;
+}
+.header {
+    height: 6.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.0rem;
+    color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+
+}
+.header > .bg-data {
+    margin-left: 0.6rem;
+    width: 4.1rem; height: 4.0rem;
+    background: url('../../images/task7/task7-2.png') -14.1rem -1.0rem;
+    transform:scale(0.7);
+}
+.header > .bg-quit {
+    margin-right: 0.6rem;
+    width: 3.9rem; height: 4.5rem;
+    background: url('../../images/task7/task7-2.png') -8.2rem -1.0rem;
+    transform:scale(0.7);
+}
+
+.nav {
+    height: 6rem;
+    background: #b9e9f5;
+    font-size: 1.5rem;
+    color: #464646;
+    position: relative;
+}
+.nav > span {
+    line-height: 6rem;
+    margin-left: 2.0rem;
+}
+/*
+***小尖角
+ */
+.nav em {
+    display: block;
+    position: absolute;
+    left: 3rem;
+    top: 5.9rem;
+    font-size: 0;
+    border: 1.0rem solid transparent ;
+    border-top: 1.5rem solid #b9e9f5;
+
+}
+.nav > .bg-play {
+    margin-top: 0.3em;
+    float: right;
+    margin-right: 1rem;
+    width: 5.2rem; height: 5.2rem;
+    background: url('../../images/task7/task7-2.png') -1.0rem -1.0rem;
+    transform:scale(0.8);
+}
+.nav button {
+    border: 1px solid transparent; /* 自定义边框*/
+    outline: none;
+}
+.tip {
+    height: 4rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.tip > span {
+    line-height: 4rem;
+    padding-left: 3.0rem;
+}
+/*
+/***技能
+ */
+.skill {
+    position: absolute;
+    display: flex;
+    left: 2rem;
+    top: 27.4rem;
+    width: 23%;
+}
+.skill > .bg-knife {
+    width: 31px; height: 30px;
+    background: url('../../images/task7/task7-2.png') -113px -82px;
+    zoom: 0.7;
+    margin-right: 0.1rem;
+
+}
+.skill > .bg-check {
+    width: 30px; height: 30px;
+    background: url('../../images/task7/task7-2.png') -10px -132px;
+    zoom: 0.7;
+}
+.skill > .bg-shoot {
+    width: 32px; height: 30px;
+    background: url('../../images/task7/task7-2.png') -10px -82px;
+    zoom: 0.7;
+    margin-left: -0.05rem;
+    margin-right: 0.1rem;
+}
+.skill > .bg-aid {
+    width: 31px; height: 30px;
+    background: url('../../images/task7/task7-2.png') -62px -82px;
+    zoom: 0.7;
+    margin-right: 0.1rem;
+    /*transform: scale(0.6);*/
+}
+/*
+***主体
+*/
+.container-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 100%;
+}
+.container-box > .box {
+     width: 22%;
+     margin: 1.0rem 1rem 3.1rem;
+     background: #ffffff;
+     border: #ffffff solid 0.3rem;
+}
+
+.container-box > .box > .status {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 5.8rem;
+    background: #f5c97b;
+    color: #464646;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+.container-box > .box > .status span {
+    line-height: 5.8rem;
+}
+.container-box > .box > .number {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #83b09a;
+    color: #d7f0f7;
+    height: 1.8rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.container-box > .box > .number span {
+    line-height: 1.8rem;
+}
+
+/*
+***投票
+*/
+.footer {
+    width: 100%;
+    background: #29bde0;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    height: 10.8rem;
+    text-align: center;
+}
+.footer > .vote {
+    width: 60%;
+    background: #fbb435;
+    height: 5rem;
+    border-radius: 0.2rem;
+    color: #f0f0f0;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2.9rem;
+}
+.footer > .vote > span {
+    line-height: 5rem;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数闭包和变量闭包</title>
+</head>
+<body>
+    <script>
+        //函数模式的闭包：函数中有函数
+        function f1(){
+            var num=10;
+            function f2(){
+                console.log(num)
+            }
+            //函数调用
+            f2();
+        }
+        f1();
+
+        // 对象模式的闭包：函数中有对象(对象可以访问函数中定义的变量)
+        function f3(){
+            var num=20;
+            var obj={
+                age:num //对象可以访问函数中定义的变量
+            };
+            console.log(obj.age+"岁")
+        }
+        f3();
+
+        //一种用法
+        // function f4(){
+        //     var num=30;
+        //     return function(){
+        //         console.log("前一个"+num)
+        //         return num;
+                
+        //     }
+        // }
+        // var ff=f4();
+        // var result=ff();
+        // console.log("后一个："+result)
+
+        //一种用法
+        // function f5(){
+        //     var num=40;
+        //     return {
+        //         age:num
+        //     }
+        // }
+        // var obj=f5();
+        // console.log(obj.age)
+    
+    
+    
+    </script>
+
+</body>
+</html>

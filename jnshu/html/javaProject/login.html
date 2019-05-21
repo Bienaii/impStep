@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login</title>
+    <link href="../../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="../../styles/css/javaProject/login.css">-->
+    <!--<link rel="stylesheet/less" href="../../styles/less/js-task/styles.less">-->
+    <style>
+        body{
+            background: url("../../images/al.jpg") bottom center no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+            /*background-color: #FFE4E1;*/
+            text-align: center;
+        }
+        .box2 {
+            display: flex;
+            justify-content: space-around;
+        }
+        .form-inline{
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 720px;
+            max-width: 330px;
+            padding-top: 50px;
+        }
+        .form-inline input{
+            margin-bottom: 10px;
+            outline: none;
+            padding: 10px;
+            font-size: 13px;
+            color: #fff;
+            text-shadow:1px 1px 1px;
+            border-top: 1px solid #312E3D;
+            border-left: 1px solid #312E3D;
+            border-right: 1px solid #312E3D;
+            border-bottom: 1px solid #56536A;
+            border-radius: 4px;
+            background-color: #2D2D3F;
+        }
+        .form-inline .form-control{
+            position: relative;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        .btn{
+            b
+            width: 300px;
+            min-height: 40px;
+            display: block;
+            background-color: #4a77d4;
+            border: 1px solid #3762bc;
+            color: #fff;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: normal;
+            border-radius: 6px;
+            margin: 0;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .checkbox{
+            margin-left: -160px;
+            font-size: 18px;
+            color: #204d74;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container" >
+    <ul class="nav nav-tabs">
+           
+        <li class="active"><a href="#tab1" data-toggle="tab">员工登录</a></li>
+           
+        <li><a href="#tab2" data-toggle="tab">管理员登录</a></li>
+           
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active " id="tab1">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Staff ID</label>
+                    <input type="number" class="form-control" id="exampleInputEmail3" placeholder="Staff ID">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                </div>
+                <br/>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me">Remember me?</input>
+                    </label>
+                </div>
+                <div class="box2">
+                    <button type="button" class="btn btn-primary btn-lg">登录</button>
+                    <button type="button" class="btn btn-primary btn-lg">注册</button>
+                </div>
+
+            </form>     
+        </div>
+        <div class="tab-pane" id="tab2">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Manager ID</label>
+                    <input type="number" class="form-control" id="exampleInputEmail5" placeholder="Manager ID">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword5" placeholder="Password">
+                </div>
+                <br/>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me">Remember me?</input>
+                    </label>
+                </div>
+                <div class="box2">
+                    <button type="button" class="btn btn-primary btn-lg">登录</button>
+                    <button type="button" class="btn btn-primary btn-lg">注册</button>
+                </div>
+            </form>
+        </div>   
+    </div>
+</div>
+
+
+<script src="../../js/js-task/task1.js"></script>
+<script src="../../lib/jquery/jquery.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../../lib/less/less.js"></script>
+</body>
+</html>

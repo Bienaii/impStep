@@ -1,0 +1,94 @@
+.box {
+    background: antiquewhite;
+    height: 600px;
+}
+
+/*
+***聊天框小尖角实现
+ */
+.tag {
+    width: 300px;
+    height: 100px;
+    border: 5px solid #09F;
+    position: relative;
+}
+
+.tag em {
+    display: block;
+    border-width: 20px;
+    position: absolute;
+    bottom: -40px;
+    left: 100px;
+    border-style: solid dashed dashed;
+    border-color: #09F transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+/*
+**覆盖层
+*/
+.tag span {
+    display: block;
+    border-width: 20px;
+    position: absolute;
+    bottom: -33px;
+    left: 100px;
+    border-style: solid dashed dashed;
+    border-color: #FFF transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+/*
+***箭头实现原理
+ */
+.arrow {
+    margin-left: 150px;
+    margin-top: 40px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border: black solid 40px;
+    border-color: #f00 #0f0 #00f #000;
+}
+/*
+***三角形实现原理
+*/
+/*font-size需设置为0，不可忽视，否则会不规则*/
+/*使用<em>、<span>是因为这两个标签初始是没有宽度高度的*/
+/*如果使用div等其他标签，则需要把width、height设为0*/
+
+.demo em {
+    margin-left: 50px;
+    margin-top: 40px;
+    font-size: 0;
+    border: 10px solid transparent;
+    /*通过设置单边border值来改变三角形的形状，值越大角度越小(越尖)*/
+    border-top: 30px solid #123456;
+}
+/*
+***小圆点实现
+ */
+.circle {
+    position: absolute;
+    margin: 52px 45px;
+    width: 40px;
+    height: 40px; /*宽高用于设置圆的大小，宽高不等则圆不规则*/
+    background: brown;
+    border-radius: 50%; /*此值越小，形状越方，超过50%即表现为圆*/
+    border: 1px solid transparent;
+
+}
+.circle span {
+    line-height: 40px;
+    margin-left: 15px;
+}
+
+/*.circle:after {*/
+/*content: '';*/
+/*margin: 3px;*/
+/*display: table;*/
+/*width: 6px;*/
+/*height: 6px;*/
+/*background: #2090ff;*/
+/*border-radius: 50%;*/
+/*}*/

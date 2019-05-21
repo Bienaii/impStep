@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hide(){
+            var hd=document.getElementById("btn")
+            hd.setAttribute('style','display:none;')
+        }    
+        function show(){
+            console.log('ok')
+        }
+    </script>
+    <input type="button" id="btn" value="点击隐藏" onclick="hide()">
+    <input type="button" id="btn" value="点击显示" onclick="show()">
+
+
+</body>
+</html>

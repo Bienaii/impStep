@@ -1,0 +1,72 @@
+body {
+    font-size:16px;
+    font-size:62.5%;/*初始化，一个良好习惯*/
+    background: #eff0f4;
+    margin: 0;
+    padding: 0;/*也是初始化*/
+}
+.header {
+    height: 3rem;
+    background: #5fc0cd;
+    display: flex;
+    justify-content: space-between;/*设置内容排列形式为两端分别左右对齐，中间居中*/
+    align-items: center;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+.header span {
+    margin: auto 1rem;/*设置左右两端各离边界1rem；*/
+}
+.span2 {
+    font-size: 1.3rem;
+}
+.phone {
+    background: #ffffff;
+    width:100%;
+    margin-top: 0.8rem;
+    height: 3.1rem;
+    position: relative;
+}
+.lock {
+    background: #ffffff;
+    width:100%;
+    margin-top: 0.8rem;
+    height: 3.1rem;
+    position: relative;
+}
+.main img {
+    width: 1.3rem;
+    margin: 0.4rem 0.8rem;
+}
+input {
+    width:70%;
+    height: 2.0rem;
+    position: absolute;
+    top: 0.6rem;/*相对于最近设有定位属性的父级，向下移动0.6rem*/
+    padding-left:1rem;/*将输入的开始位置相对于框的左边界左移1rem*/
+    border:0;
+    border-left:1px solid #eaedee;/*只设置border一边来达到分离图标和文本的效果*/
+    outline-style: none;/*文本框获取焦点（即输入）时，去掉文本框的边框*/
+}
+.confirm {
+    margin-top: 1.0rem;
+    height: 3.5rem;
+    background: #5fc0cd;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ffffff;
+    position:relative;
+}
+.confirm span {
+    line-height: 3.5rem;
+}
+a {
+    float: right;
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    color:#5fc0cd;
+}
+
+
+
+

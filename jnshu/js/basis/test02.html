@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bind方法及其使用</title>
+</head>
+<body>
+    <script>
+        // apply和call是直接改变this指向
+        // bind方法是复制的时候改变了this的指向
+        /**
+        * 使用语法:
+        *  函数名.bind(对象，参数1，参数2，...); 返回值是复制之后的这个函数
+        *  方法名.bind(对象，参数1，参数2，...); 返回值是复制之后的这个方法
+        */
+        // function f1(x,y){
+        //     console.log((x+y)+":====="+this)
+        // }
+
+        //bind方法是复制的意思，复制一份的时候，把参数传入了f1参数，其中第一个参数为对象，null在此为this，默认为window
+        // var ff=f1.bind(null,10,20)
+        // ff();
+
+        // function Person(){
+        //     this.age=1000
+        // }
+        // Person.prototype.eat=function(){
+        //     console.log('吃的方法')
+        // }
+        // var per=new Person();
+
+        // var ff=f1.bind(per,10,20)
+        // ff();
+        
+        function ShowRandom(){
+            // 产生1-10随机数
+            this.number=parseInt(Math.random()*10+1);
+        }
+        ShowRandom.prototype.show1=function(){ //原型的this也指向实例
+            //原本写法：setInterval( function(){},1000); this.show2代替了function,随后调用bind并通过传入this改变了this指向(指向实例)
+            window.setInterval(this.show2.bind(this),1000)
+        }
+        //添加原型方法显示随机数
+        ShowRandom.prototype.show2=function(){
+            console.log(this.number)
+        }
+        var sr=new ShowRandom();
+        //调用这个方法，可以不停产生随机数
+        sr.show1()
+
+    </script>
+</body>
+</html>

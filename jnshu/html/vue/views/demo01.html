@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <title>文字走马灯效果实现</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="浪起来" v-on:click="run">
+        <input type="button" value="猥琐" @click="stop">
+        <h3>{{ msg }}</h3>
+    </div>
+    <script>
+        // 在vm实例中， 如果想要获取data中的数据，或者想要调用method中的方法，必须使用this.（this在此处即为vm实例）
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                // vm实例会监听data中所有数据的变化，只要一有变化，就同时同步到页面中,开发员不用考虑如何重新渲染
+                msg: '猥琐发育~~别浪!!',
+                intervalId: null
+            },
+            methods: {
+                // es6写法
+                run() {
+                    // 防止连续点击按钮，定时器多次重复设置
+                    if (this.intervalId != null) return;
+
+                    // 解决定时器里的this指向问题
+                    // var that=this
+
+                    // =>为es6写法，使内部this与外部this表达一致
+                    this.intervalId = setInterval(() => {
+                        // 获取到头的第一个字符
+                        var start = this.msg.substring(0, 1)
+                        // console.log(start)
+                        // console.log(this.msg)
+                        // 获取到包含索引值为1后面的所有字符
+                        var end = this.msg.substring(1) //第二个参数可选
+                        // console.log(end)
+                        this.msg = end + start
+                        // console.log(this.msg)
+                    }, 300)
+                },
+                stop() {
+                    clearInterval(this.intervalId);
+                    // 每当清除了定时器后，就需要重新把intervalId设置为null
+                    this.intervalId = null
+                }
+            }
+        })
+        // 1、给按钮绑定一个事件
+        // 2、在按钮的事件处理函数中，写相关的业务逻辑代码：拿到msg字符串，然后调用字符串的substring方法进行字符串的截取操作，
+        //    把 第一个字符截取下来，然后放到最后一个位置即可
+        // 3、设置一个定时器，使得所有字符都能被截取
+    </script>
+
+
+</html>

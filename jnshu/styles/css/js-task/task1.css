@@ -1,0 +1,41 @@
+body {
+    font-family: "华文宋体";
+    font-size: 62.5%;
+    margin: 0;/*body默认会有8个像素margin，这样设定后可以清除body的margin*/
+    padding: 0;/*清除默认margin和padding后,css样式才不会有偏差*/
+}
+.block {
+    padding-bottom: 30%;/*高度自适应，30%*/
+    margin-top: 3%;
+    border-radius: 10%;
+    background-color: orange;
+}
+
+.box  {
+    display: flex;/*将对象作为弹性伸缩盒显示*/
+    flex-wrap: wrap;/*flex-wrap定义换行情况，设置为wrap表示第一行在上方*/
+    justify-content: space-around;  /*justify-content定义了项目在主轴上的对齐方式*/
+    /*弹性项目平均分布在该行上，两边留有一半的间隔空间*/
+}
+.box > .block {
+    width: 30%;
+}
+
+.start, .end {
+    width: 100%;
+    height: 5rem;
+    font-size: 1.5rem;
+    color: orange;
+    line-height: 5rem;
+    text-align: center;
+    background: #ffffff;
+    border: orange solid 1px;
+    border-radius: 5px;
+    margin-top: 3%;
+    font-weight: 600;
+}
+.start:hover, .end:hover{
+    color: #ffffff;
+    background: orange;
+
+}

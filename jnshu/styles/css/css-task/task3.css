@@ -1,0 +1,36 @@
+html {
+    font-size: 16px;/*如此设置之后，1rem=16px； */
+    font-size: 62.5%;/*再次设置之后，1rem=10px；*/
+}
+body {
+    background-color:#68cdd6;
+    color: white;/*color设置的是字体的颜色*/
+}
+.topbar {
+    margin: 1rem 0.5rem;
+}
+.container {
+    margin: 0 14%;
+}
+.title {
+    text-align: center;
+    margin-top: 6rem;
+}
+.content {
+    margin: 7.5rem 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.contact {
+    padding-top: 4rem;
+}
+.btn {
+    display: inline-block;/*不独占一行的块级元素*/
+    text-align: center;
+}
+.btn p {
+    font-size: 1.2rem;
+}
+.btn_contacts {
+    float: right;
+}

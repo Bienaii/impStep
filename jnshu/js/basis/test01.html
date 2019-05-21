@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>apply、call归属</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            console.log(this+"=====调用了")
+        }
+        console.dir(f1)
+        //对象调用方法，说明对象中有这个方法
+        f1.apply();
+        f1.call();
+
+        console.log("Function.prototype==="+Function.prototype)
+        console.dir(Function)
+
+        //apply、call方法实际上不在函数这个实例中，而是在Function.prototype中
+
+
+        
+    </script>
+</body>
+</html>

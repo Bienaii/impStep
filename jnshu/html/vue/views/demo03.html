@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/> -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+    <title>template</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">添加品牌</h3>
+            </div>
+            <div class="panel-body form-inline">
+                <label for="">
+                    Id：
+                    <input type="text" class="form-control" v-model="id">
+                </label>
+                <label for="">
+                    Name：
+                    <input type="text" class="form-control" v-model="name" @keyup.enter.f2="add">
+                </label>
+                <input type="button" value="添加" class="btn btn-primary" @click="add">
+                <label for="" style="float:right">
+                    搜索关键字：
+                    <input type="text" class="form-control" v-model="keywords" v-focus>
+                </label>
+            </div>
+        </div>
+
+
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>CTime</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in search(keywords)" :key="item.id">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.ctime | dateFormat("") }}</td>
+                    <td><a href="#" @click.prevent="del(item.id)">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+        // 全局过滤器，进行时间格式化
+        Vue.filter('dateFormat', function (dateStr, pattern) {
+            // 根据给定的时间字符串，得到特定的时间
+            var dt = new Date(dateStr)
+            var y = dt.getFullYear()
+            // es6特性，字符串不够两位时，填补方法padStart、padEnd
+            var m = (dt.getMonth() + 1).toString().padStart(2,'0')
+            var d = (dt.getDate()).toString().padStart(2,'0')
+
+            // 模板字符串中嵌入变量，需要将变量名写在 ${} 之中。
+            if (pattern.toLowerCase() === 'yyyy-mm-dd') {
+                return `${y}-${m}-${d}`
+            } else {
+                var hh = (dt.getHours()).toString().padStart(2,'0')
+                var mm = (dt.getMinutes()).toString().padStart(2,'0')
+                var ss = (dt.getSeconds()).toString().padStart(2,'0')
+
+                return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+            }
+        })
+
+        //自定义全局按键修饰符，按下某键会执行特定处理函数
+        Vue.config.keyCodes.f2=113  //113为键盘码值，网上可查
+
+        // 使用Vue.directive()自定义全局的指令（vue本身没有提供的指令）  v-focus
+        // 参数一：指令的名称，在定义的时候，不需要加 v-前缀，但是在调用的时候一定要加上 v-前缀
+        // 参数二：是一个对象，这个对象上有一些指令相关的函数，这些函数可以再特定的阶段，执行相关的操作
+        Vue.directive('focus',{
+            bind: function(el){//每当指令绑定到元素上的时候，会立即执行这个bind函数，只执行一次
+                // 在每一个函数中，第一个参数都是el，表示被绑定了指令的那个元素，它是一个原生的js对象
+                // 在元素刚绑定了指令的时候，还没有插入到DOM中，这时候，调用focus方法没有作用，因为一个元素只有插入DOM之后才能获取焦点
+                el.focus()
+            },
+            inserted: function(el){//inserted表示元素插入到DOM中的时候，会执行inserted函数，触发一次
+                el.focus()
+            },
+            update: function(){//当VNode更新时，会执行update，可触发多次
+
+            }
+        })
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                id: '',
+                name: '',
+                keywords: '',
+                list: [{
+                        id: 1,
+                        name: '奔驰',
+                        ctime: new Date()
+                    },
+                    {
+                        id: 2,
+                        name: '宝马',
+                        ctime: new Date()
+                    },
+                    {
+                        id: 3,
+                        name: '奥迪',
+                        ctime: new Date()
+                    }
+                ]
+            },
+            methods: {
+                add() {
+                    var car = {
+                        id: this.id,
+                        name: this.name,
+                        ctime: new Date()
+                    }
+                    this.list.push(car)
+                    this.id = this.name = ''
+                },
+
+                del(id) {
+                    var index = this.list.findIndex(item => {
+                        if (this.id = id) {
+                            return true;
+                        }
+                    })
+                    this.list.splice(index, 1)
+
+                },
+                
+                search(keywords) {
+                    /*var newList=[]
+                    this.list.forEach(item =>{
+                        if(item.name.indexOf(keywords)!=-1){
+                            newList.push(item)
+                        }
+                    })
+                    return newList;*/
+                    var newList = []
+                    return this.list.filter(item => {
+                        if (item.name.includes(keywords)) {
+                            return item;
+                        }
+                    })
+                },
+                
+                filters:{ //定义私有过滤器
+
+                },
+
+                directives: { //定义私有指令
+                    'fontweight': {//对于bind、update其实有简写形式，
+                        bind:function(el,binding){
+                            el.style.fontweight=binding.value
+                        }
+                    }
+                }
+
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器中传入函数作为参数</title>
+</head>
+<body>
+    <script>
+    function f1(fn){
+        setInterval( function(){
+            console.log("定时器开启")
+            fn();
+            console.log("============")
+        },2000)
+    }
+    f1(function (){
+        console.log("定时器关闭")
+    })
+    // function f2(){
+    //     console.log("定时器关闭")
+    // }
+    // f1(f2);
+
+    </script>
+    
+</body>
+</html>

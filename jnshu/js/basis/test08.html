@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css"></link>
+    <title>使用闭包实现点赞功能</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        li{
+            float:left;
+            margin-left:10px;
+        }
+        img{
+            height:200px;
+            width:300px;
+        }
+        input{
+            margin-left:30%;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <ul>
+        <li><img src="images/1.jpg" alt=""/></br><input type="button" class="btn btn-primary" value="赞(1)"></li>
+        <li><img src="images/2.jpg" alt=""/></br><input type="button" class="btn btn-primary" value="赞(1)"></li>
+        <li><img src="images/3.jpg" alt=""/></br><input type="button" class="btn btn-primary" value="赞(1)"></li>
+    </ul>
+    <script>
+        // 获取所有的按钮
+        //封装一个函数，根据标签名字获取元素，返回一个数组
+        // function my$(tagName){
+        //     return document.getElementsByTagName(tagName)
+        // }
+        // var btnObjs=my$("input");
+        // var value=1;
+        // //循环遍历每个按钮
+        // for(var i=0;i<btnObjs.length;i++){
+        //     //为每个按钮注册点击事件
+        //     btnObjs[i].onclick=function(){
+        //         this.value="赞("+(value++)+")";
+        //     }
+        // }
+
+        //闭包方式
+        function my$(tagName){
+            return document.getElementsByTagName(tagName)
+        }
+
+        //闭包缓存数据
+        function getValue(){
+            var value=2;
+            return function(){
+                //每一次点击的时候，都应该改变当前按钮value的值
+                this.value="赞("+(value++)+")";
+            }
+        }
+        var btnObjs=my$("input");
+        //循环遍历每个按钮
+        for(var i=0;i<btnObjs.length;i++){
+            //为每个按钮注册点击事件
+            btnObjs[i].onclick=getValue()
+        }
+    </script>
+</body>
+</html>

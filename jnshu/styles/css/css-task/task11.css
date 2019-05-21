@@ -1,0 +1,70 @@
+body {
+  font-size:16px;
+  font-size:62.5%;/*åˆå§‹åŒ–ï¼Œä¸€ä¸ªè‰¯å¥½ä¹ æƒ¯*/
+  background: #eff0f4;
+  margin: 0;
+  padding: 0;/*ä¹Ÿæ˜¯åˆå§‹åŒ–*/
+  font-family: Arial, "Times New Roman", "Microsoft YaHei", SimSun, SimHei;
+}
+.header {
+  height: 5rem;
+  background: #5fc0cd;
+  display: flex;
+  justify-content: space-between;/*è®¾ç½®å†…å®¹æŽ’åˆ—å½¢å¼ä¸ºä¸¤ç«¯åˆ†åˆ«å·¦å³å¯¹é½ï¼Œä¸­é—´å±…ä¸­*/
+  align-items: center;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.header span {
+  margin: auto 1rem;/*è®¾ç½®å·¦å³ä¸¤ç«¯å„ç¦»è¾¹ç•Œ1remï¼›*/
+}
+.span2 {
+  font-size: 1.7rem;
+}
+.phone {
+  background: #ffffff;
+  width:100%;
+  margin-top: 0.8rem;
+  height: 4rem;
+  position: relative;
+}
+.lock {
+  background: #ffffff;
+  width:100%;
+  margin-top: 0.8rem;
+  height: 4rem;
+  position: relative;
+}
+.main img {
+  width: 1.3rem;
+  margin: 0.8rem 0.8rem;
+}
+input {
+  width:70%;
+  height: 3.1rem;
+  position: absolute;
+  top: 0.6rem;/*ç›¸å¯¹äºŽæœ€è¿‘è®¾æœ‰å®šä½å±žæ€§çš„çˆ¶çº§ï¼Œå‘ä¸‹ç§»åŠ¨0.6rem*/
+  padding-left:1rem;/*å°†è¾“å…¥çš„å¼€å§‹ä½ç½®ç›¸å¯¹äºŽæ¡†çš„å·¦è¾¹ç•Œå·¦ç§»1rem*/
+  border:0;
+  border-left:1px solid #eaedee;/*åªè®¾ç½®borderä¸€è¾¹æ¥è¾¾åˆ°åˆ†ç¦»å›¾æ ‡å’Œæ–‡æœ¬çš„æ•ˆæžœ*/
+  outline-style: none;/*æ–‡æœ¬æ¡†èŽ·å–ç„¦ç‚¹ï¼ˆå³è¾“å…¥ï¼‰æ—¶ï¼ŒåŽ»æŽ‰æ–‡æœ¬æ¡†çš„è¾¹æ¡†*/
+}
+.confirm {
+  margin-top: 1.0rem;
+  height: 5rem;
+  background: #5fc0cd;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #ffffff;
+  position:relative;
+}
+.confirm span {
+  line-height: 5rem;
+}
+a {
+  float: right;
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+  margin-right: 0.3rem;
+  color:#5fc0cd;
+}

@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+
+}
+
+/*头部*/
+.bar {
+    height: 6.5rem;
+    background: #29bde0;
+}
+
+.bg-more {
+    position: absolute;
+    top: 1.9rem;
+    width: 3.4rem;
+    height: 2.7rem;
+    background: url('../../../images/task7/task7_1.png') -19rem -1rem;
+    margin-left: 1.5em;
+}
+
+.container {
+    background: #f0f0f0;
+    /*height: 90rem;*/
+    text-align: center;
+}
+
+/*游戏记录*/
+.container > .version {
+    height: 8rem;
+    background: #ffffff;
+    font-size: 2.8rem;
+    color: #b6b6b6;
+    margin: 2rem auto;
+    text-align: center;
+
+}
+
+.container > .version > .span1 {
+    line-height: 8rem;
+}
+
+.bg-tsk_03 {
+    /*position: absolute;*/
+    float: right;
+    margin-top: 2rem;
+    margin-right: 1rem;
+
+    width: 2.4rem; height: 4rem;
+    background: url('../../../images/task7/task7_1.png') -13rem -7rem;
+}
+
+/*当前游戏*/
+.game {
+    background: #ffffff;
+    height: 60rem;
+
+}
+
+.game > .game-name {
+    background: #ffffff;
+    font-size: 2.9rem;
+    color: #fbb435;
+    border-bottom: #fbb435 solid 1px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.game-name > .span2 {
+    line-height: 7rem;
+}
+
+/*选择游戏版本*/
+.simplify {
+    text-align: center;
+}
+
+.panel {
+    width: 75%;
+    margin: 1rem auto;
+    border: 0;
+
+}
+
+.panel > .panel-body {
+    height: 8.8rem;
+    padding: 0;
+    background: #69d1e9;
+}
+
+.panel-body > .span3 {
+    line-height: 8.8rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.panel > .panel-footer {
+    background: transparent;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    color: #8d8d8d;
+    border: 0;
+
+}
+/*切换页面*/
+
+.bg-right {
+    position: absolute;
+    right: 2.5rem;
+    margin-top: 2rem;
+    width: 2.9rem; height: 5.5rem;
+    background: url('../../../images/task7/task7_1.png') -1rem -7.2rem;
+}
+
+.carousel {
+    height: 5rem;
+
+}
+.carousel-indicators > li{
+    background: #f0f0f0;
+}
+.carousel-indicators > .active{
+    background: #69d1e9;
+}
+
+
+/*bootstrap样式引入*/
+.panel-default {
+    border-color: #ddd;
+}
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+}
+
+.panel-default > .panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333;
+}
+
+.panel-default > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #ddd;
+}

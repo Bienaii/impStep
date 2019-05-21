@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>readyState</title>
+  </head>
+  <body>
+    <script>
+      //1.创建一个XMLHttpRequest类型的对象---相当于打开了一个浏览器
+      var xhr = new XMLHttpRequest();
+      console.log(xhr.readyState); //readyState的可能值为0(UNSET),1(OPENED),2(HEADERS_RECEIVED),3(LOADING),4(DONE)
+      //readyState-->0   代理（xhr）被创建，但尚未调用open()方法
+
+      //2.打开与同一个网址之间的连接---相当于在地址栏输入访问地址
+      xhr.open("GET", "data.txt");
+      console.log(xhr.readyState);
+      //readyState-->1   open()方法已经被调用，建立了一个与服务器特定端口的连接（如80,8080等，可自定义）
+
+      //3.通过连接放送一次请求---相当于回车或者点击访问发送请求
+      xhr.send(null);
+      console.log(xhr.readyState);
+      //readyState-->依旧为 1
+
+      //4.指定xhr状态变化事件处理函数---相当于处理网页呈现后的操作
+      xhr.addEventListener("readystatechange", function() {
+        //readyState值为4时，表示请求的相应已经接受完成
+        //   if(this.readyState!==4) return;
+        //   console.log(this.responseText);
+        switch (this.readyState) {
+          case 2:
+            //readyState-->2   send()方法已经被调用，并且已经可以获取状态行和响应头
+            console.log(this.readyState);
+
+            //可以获取到响应报文的响应头
+            console.log(this.getAllResponseHeaders);
+
+            //当然也可以获取响应头里的某个属性数据
+            console.log(this.getResponseHeader("server"));
+
+            //但是还获取不到响应体
+            console.log(this.responseText);
+
+            break;
+          case 3:
+            //readyState-->3  响应体下载中，responseText属性可能已经包含部分数据
+            console.log(this.readyState);
+            
+            //打印响应体，极小可能包含全部信息，可能为空，可能不完整，视上传下载速度及内容大小而定
+            //在此处处理响应体不可靠
+            console.log(this.responseText);
+
+            break;
+          case 4:
+            console.log(this.readyState);
+            //readyState-->4   响应体（报文）下载完成，可以直接使用responseText
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>

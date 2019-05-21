@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>封装ajax方法</title>
+<body>
+    <script>
+        function get(url,callback){
+            var xhr=new XMLHttpRequest()
+            
+            xhr.open('get',url,true)
+            // 当加载成功后要调用的函数
+            xhr.onload=function(){
+                // 回调函数得到想要的数据
+                callback(xhr.responseText)
+            }
+            xhr.send()
+
+        }
+        
+        get('data.json',function(data){
+            console.log(data)
+        })
+    </script>
+    
+</body>
+</html>

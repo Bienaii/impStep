@@ -1,0 +1,31 @@
+<!-- 此例演示在浏览器中使用art-template -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>在浏览器中使用art-template</title>
+  </head>
+  <body>
+    <!-- 模板引擎不关心字符串内容，只关心自己能认识的模板标记语法 {{}} 
+        即使你给他给内容加上html标签，他也只会把标签按字符串输出
+    -->
+    <script src="node_modules/art-template/lib/template-web.js"></script>
+    <script type="text/template" id="tpl">
+      大家好，我叫：{{ name }}
+      我今年{{ age }}
+      我来自{{ province }}
+      我喜欢：{{ each hobbies }}{{ $value }}{{ /each }}
+    </script>
+    <script>
+      var result = template('tpl', {
+        name: "Jack",
+        age: "18",
+        province: "广东省",
+        hobbies: ["写代码", "唱歌", "打游戏"]
+      });
+      console.log(result)
+    </script>
+  </body>
+</html>

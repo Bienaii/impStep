@@ -1,0 +1,58 @@
+.box1 {
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 30%;
+    text-align: center;
+}
+
+/*bootstrap拓展*/
+@media (min-width: 768px) {
+    .form-staff .staff-group {
+        display: block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+    .form-staff .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    .form-staff .form-control-static {
+        display: inline-block;
+    }
+    .form-staff .input-group {
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .form-staff .input-group .input-group-addon,
+    .form-staff .input-group .input-group-btn,
+    .form-staff .input-group .form-control {
+        width: auto;
+    }
+    .form-staff .input-group > .form-control {
+        width: 100%;
+    }
+    .form-staff .control-label {
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+    .form-staff .radio,
+    .form-staff .checkbox {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+    .form-staff .radio label,
+    .form-staff .checkbox label {
+        padding-left: 0;
+    }
+    .form-staff .radio input[type="radio"],
+    .form-staff .checkbox input[type="checkbox"] {
+        position: relative;
+        margin-left: 0;
+    }
+    .form-staff .has-feedback .form-control-feedback {
+        top: 0;
+    }
+}

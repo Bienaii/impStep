@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <title>生命周期函数</title>
+</head>
+<body>
+    <div id="app">
+        <input type="button" name=""value="改变msg" id="" @click="msg='No'">
+        <h3 id="h3">{{ msg}}</h3>
+    </div>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'Ok'
+            },
+            methods:{
+                show(){
+                    console.log('执行了show方法')
+                }
+            },
+
+            //实例创建期间的四个生命周期钩子
+            beforeCreate() { //这是我们遇到的第一个生命周期函数，表示实例完全被创建出来之前，会执行它
+                // console.log(this.msg)
+                // this.show()
+                //在 beforeCreate 生命周期函数执行的时候，data和methods中的数据都还没有初始化
+            },
+            created(){ //这是遇到的第二个生命周期函数
+                // console.log(this.msg)
+                // this.show()
+                //在created中，data和methods已经初始化，
+                //
+            },
+            beforeMount() { //这是遇到的第三个周期函数，表示模板已经在内存中编辑好了，但是尚未渲染到页面中去(意义为挂载之前)
+                // console.log(document.getElementById('h3').innerText)
+                // 在beforeMount 执行的时候，页面中的元素，还没有被真正替换过来，只是之前写的一些模板字符串
+            },
+            mounted() { //这是遇到的第四个生命周期函数，表示内存中的模板已经真实的挂载到了页面中，用户已经可以看到渲染好的页面
+                // console.log(document.getElementById('h3').innerText)
+                //mounted 是实例创建期间的最后一个生命周期函数，当执行完mounted就表示，实例已经完全创建好了
+                //此时，如果没有其他操作的话，这个实例就在内存当中，一动不动
+                //操作DOM节点，至少需要到这里之后
+            },
+            
+            //下面是运行期间的两个生命周期钩子
+            beforeUpdate() { //表示页面还没有被更新，但数据其实已经被更新了
+                // console.log('界面上元素的内容：'+document.getElementById('h3').innerText)
+                // console.log('data中的msg数据是：'+this.msg)
+                //结论：当执行beforeUpdate时，页面中显示的数据还是旧的，但data数据是最新的，只是尚未与页面同步
+            },
+            updated() { //表示页面已经被更新
+                console.log('界面上元素的内容：'+document.getElementById('h3').innerText)
+                console.log('data中的msg数据是：'+this.msg)
+                //结论：当执行updated时，data数据与页面已经同步了
+            },
+
+            //下面是销毁阶段的两个生命周期函数
+            beforeDestroy() { //此时Vue实例已经从运行阶段进入到了销毁阶段
+                // 此时data、methods以及过滤器、指令等都处于可用状态，还没有真正被销毁
+            },
+            destroyed() { //此时Vue实例、组件等已经销毁了
+                // 即data、methods以及过滤器、指令等都处于不可用状态，已经被销毁
+            }
+        })
+    </script>
+</body>
+</html>
