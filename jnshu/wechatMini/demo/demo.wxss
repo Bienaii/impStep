@@ -1,121 +1,75 @@
-/* pages/setting/setting.wxss */
-.userinfo {
+page{
+    background-color: #F0EFF5;
+  }
+  .list{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background-color: white;
+    margin-top: 2rpx;
+    padding: 25rpx;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background: #f0145a;
-    width: 100%;
-    height: 300rpx;
-}
-
-.userinfo-btn {
-    margin-top: 50rpx;
-    background: none !important;
-    color: #fff !important;
-    font-size: 40rpx;
-}
-
-.account-bg {
-    width: 100%;
-    height: 150rpx;
-}
-
-.userinfo-avatar {
-    width: 108rpx;
-    height: 108rpx;
-    margin: 40rpx;
-    border-radius: 50%;
-}
-
-.userinfo-nickname {
+    justify-content:space-between;
+    min-height: 150rpx;
+  }
+  .delete{
+    position: absolute;
+    top:0rpx;
+    background-color: #e64340;
+    width: 180rpx;
+    text-align: center;
+    z-index: 1;
+    right: 0;
     color: #fff;
-}
-
-/* 订单 */
-.order {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 90rpx;
-}
-
-.myorder-text {
-    font-size: 34rpx;
-    color: gray;
-    margin: 20rpx;
-    width: 40%;
-}
-
-.myorderlook-text {
-    font-size: 32rpx;
-    color: gray;
-    position: relative;
-    right: 20rpx;
-    width: 60%;
-    text-align: right;
-}
-
-.next-image {
-    width: 20rpx;
-    height: 25rpx;
-    position: relative;
-    right: 10rpx;
-}
-
-.navs {
-    display: flex;
-}
-
-.nav-item {
-    width: 25%;
+    height: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    padding: 20rpx;
-}
-
-.nav-item .nav-image {
-    width: 55rpx;
-    height: 55rpx;
-    margin: 5rpx;
-}
-
-.nav-item text {
-    margin-top: 20rpx;
-    font-size: 28rpx;
-    color: gray;
-}
-
-/* 列表 */
-.person-list {
+    justify-content: center;
+  }
+  .info{
     display: flex;
     flex-direction: column;
-    align-items: left;
-}
-
-.list-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 80rpx;
-}
-
-.item-image {
+    align-items: flex-start;
+  }
+  .info view:first-child{
+    text-align: center;
+    font-size: 35rpx;
+    margin-bottom: 10rpx;
+  }
+  .info view:nth-child(2){
+    font-size: 30rpx;
+    margin-bottom: 10rpx;
+  }
+  .def{
+    font-size: 30rpx;
+    border:1rpx solid red;
+    border-radius: 5rpx;
+    padding:0 10rpx;
+    color: red;
+    margin-right: 10rpx;
+  }
+  .phone{
+    color:gray;font-size:30rpx;margin: 0 20rpx;
+  }
+  .edit{
+    padding:40rpx;
+  }
+  .edit image{
     width: 40rpx;
     height: 40rpx;
-    margin: 20rpx;
-}
-
-.item-text {
-    color: gray;
+    margin-left:10rpx;
+  }
+  .add{
+    width: 650rpx;
+    border: 2rpx solid gray;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
     font-size: 30rpx;
-    margin-left: 20rpx;
-}
-
-.person-line {
-    width: 80%;
-    height: 2rpx;
-    background: lightgray;
-    margin-left: 90rpx;
-}
+    border-radius: 10rpx;
+    position: fixed;
+    bottom: 50rpx;
+    left: 50rpx;
+    background-color: white;
+  }

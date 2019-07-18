@@ -1,56 +1,24 @@
-<view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn">
-        点击微信授权
-    </button>
-    <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view wx:for="{{address}}" style='position: relative;'>
+  <!-- 列表层 -->
+  <view class='list' style='{{item.txtStyle}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index='{{index}}'>
+    <!-- 收货信息 -->
+    <view class='info' bindtap='select_addr' data-id="{{item.id}}">
+      <view>
+        {{item.name}} 
+        <span class="phone">{{item.phone}}</span>
+        <span wx:if="{{item.default == 1}}" class='def'>默认</span>
+      </view>
+      <view>
+        {{item.province}} {{item.address}}
+      </view>
+    </view>
+    <!-- 编辑图标 -->
+    <view class='edit' bindtap='edit' data-id='{{item.id}}' >
+      <image src='/image/edit.png'></image>
+    </view>
+  </view>
+  <!-- 删除按钮 -->
+  <view class="delete" data-id="{{item.id}}" data-index='{{index}}' bindtap="delItem" >删除</view>
 </view>
-<view class="separate"></view>
-<view class="order" catchtap="toOrder">
-    <text class="myorder-text">我的订单</text>
-    <text class="myorderlook-text">查看全部订单</text>
-</view>
-<view class="line"></view>
-<view class="navs">
-    <block wx:for-items="{{orderItems}}" wx:key="name">
-        <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
-            <image src="{{item.imageurl}}" class="nav-image" />
-            <text>{{item.name}}</text>
-        </view>
-    </block>
-</view>
-<view class="separate"></view>
-<view class="person-list">
-    <view class="list-item">
-        <image class="item-image" src="../../images/person/personal_card.png"></image>
-        <text class="item-text">优惠券</text>
-    </view>
-    <view class="person-line"></view>
-    <view class="list-item">
-        <image class="item-image" src="../../images/person/personal_favorite.png"></image>
-        <text class="item-text">我的收藏</text>
-    </view>
-    <view class="person-line"></view>
-    <view class="list-item">
-        <image class="item-image" src="../../images/person/personal_site.png"></image>
-        <text class="item-text">收货地址</text>
-    </view>
-    <view class="person-line"></view>
-    <view class="list-item">
-        <image class="item-image" src="../../images/person/personal_sale_record.png"></image>
-        <text class="item-text">售后记录</text>
-    </view>
-    <view class="person-line"></view>
-    <view class="list-item">
-        <image class="item-image" src="../../images/person/personal_evaluated.png"></image>
-        <text class="item-text">我的评价</text>
-    </view>
-    <view class="person-line"></view>
-    <view class="list-item">
-        <image class="item-image" src="../../images/person/personal_customer.png"></image>
-        <text class="item-text">在线客服</text>
-    </view>
-</view>
-<view class="separate"></view>
+ 
+<view class='add' bindtap='add'>添加地址</view>
